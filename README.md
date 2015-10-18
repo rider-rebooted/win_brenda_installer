@@ -9,4 +9,4 @@ Step by step installer for getting James Yonan's [Brenda](https://github.com/jam
 
 Install Python 2.7 onto Windows
 
-Download the "win_brenda_installer.py" file and move it to your "C:\Python27" directory. Shift-right click an empty space in the explorer folder and select "open command window here". Type "python win_brenda_installer.py to run the installer.
+Download the "win_brenda_installer.py" file and move it to your "C:\Python27" directory. Shift-right click an empty space in the explorer folder and select "open command window here". Type "python win_brenda_installer.py" to run the installer. It assumes you already have s3 project and frame buckets set up and ready to go. 
