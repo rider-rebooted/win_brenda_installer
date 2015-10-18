@@ -13,6 +13,7 @@ br = 'brenda'
 bm = 'c:/brenda-master'
 bs = 'setup.py'
 qu = '"'
+s3 = 's3cmd'
 
 def spacetime ():
     time.sleep(2)
@@ -154,6 +155,26 @@ DONE=shutdown
 \n"""
 			file.write(u+probuc+v+proj+w+probuc+x+frabuc+y)
 			file.close()
+			status = os.chdir(bm)
+			spacetime()
+			break
+		
+def step6 ():
+	print
+	print 'Step 6'
+	print
+	print 'Installs "s3cmd"'
+	print
+	print
+	print
+	while True:
+		submen = raw_input('Enter "c" to continue or "s" to skip ')
+		if submen =='s':		   
+			break
+		if submen =='c':
+			clear()
+			status = os.chdir(bm)
+			status = os.system(pi+sb+ins+sb+s3)
 			spacetime()
 			break
 
@@ -167,3 +188,5 @@ clear()
 step4()
 clear()
 step5()
+clear()
+step6()
