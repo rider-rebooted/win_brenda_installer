@@ -14,6 +14,12 @@ bm = 'c:/brenda-master'
 bs = 'setup.py'
 qu = '"'
 s3 = 's3cmd'
+ps = 'c:/python27/scripts'
+cn = '--configure'
+ap = '/AppData/Roaming/'
+ini = '.s3cmd.ini'
+scf = '.s3cfg'
+sl = '/'
 
 def spacetime ():
     time.sleep(2)
@@ -178,7 +184,49 @@ def step6 ():
 			spacetime()
 			break
 
+def step7 ():
+	print
+	print 'step 7'
+	print
+	print 'Runs the "s3cmd" configuration'
+	print
+	print
+	print
+	while True:
+		submen = raw_input('Enter "c" to continue or "s" to skip ')
+		if submen =='s':		   
+			break
+		if submen =='c':
+			clear()
+			status = os.chdir(ps)
+			status = os.system(py+sb+s3+sb+cn)
+			spacetime()
+			status = os.chdir(bm)
+			break
 
+def step8 ():
+	print
+	print 'step 8'
+	print
+	print 'Move and rename the "s3cmd" configuration file'
+	print
+	print
+	print
+	while True:
+		submen = raw_input('Enter "c" to continue or "s" to skip ')
+		if submen =='s':		   
+			break
+		if submen =='c':
+			clear()
+			from os.path import expanduser
+			home = expanduser("~")
+			status = os.rename(home+ap+ini, home+sl+scf)
+			spacetime()
+			break
+	
+
+
+clear()
 step1()
 clear()
 step2()
@@ -190,3 +238,8 @@ clear()
 step5()
 clear()
 step6()
+clear()
+step7()
+clear()
+step8()
+clear()
