@@ -12,6 +12,7 @@ Step by step installer for getting James Yonan's [Brenda](https://github.com/jam
 #HOW TO RUN#
 
 Install Python 2.7 onto Windows from [here](https://www.python.org/downloads/)
+
 Install Microsoft Visual C++ Compiler for Python 2.7 from [here](https://www.microsoft.com/en-gb/download/details.aspx?id=44266)
 
 Download the "win_brenda_installer.py" and move it to your "C:\Python27" directory. Shift-right click an empty space in the explorer folder and select "open command window here". 
