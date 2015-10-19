@@ -71,8 +71,16 @@ def step1 ():
 			break
 		if submen =='c':		   
 			status = os.system("""for /f "skip=2 tokens=3*" %a in ('reg query HKCU\Environment /v PATH') do @if [%b]==[] ( @setx PATH "%~a;c:\python27" ) else ( @setx PATH "%~a %~b;c:\python27" )""")
-			spacetime()
 			status = os.system("""for /f "skip=2 tokens=3*" %a in ('reg query HKCU\Environment /v PATH') do @if [%b]==[] ( @setx PATH "%~a;C:\Python27\Scripts" ) else ( @setx PATH "%~a %~b;C:\Python27\Scripts" )""")
+			print
+			while True:
+				errchk = raw_input('If this resulted in an error then enter "e" otherwise enter "c" to continue ')
+				if errchk =='e':
+					status = os.system('setx PATH ""')
+					continue
+				if errchk =='c':
+					break
+			break
 			clear()
 			print 'continue'
 			spacetime()
