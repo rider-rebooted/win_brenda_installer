@@ -9,10 +9,12 @@ Step by step installer (each step is skippable) for getting James Yonan's [Brend
  
 #HOW TO RUN#
 
-Install Python 2.7 onto Windows (with default settings) from [here](https://www.python.org/downloads/)
+1.Install Python 2.7 onto Windows (with default settings) from [here](https://www.python.org/downloads/)
 
-Install Microsoft Visual C++ Compiler for Python 2.7 from [here](https://www.microsoft.com/en-gb/download/details.aspx?id=44266)
+2.Install Microsoft Visual C++ Compiler for Python 2.7 from [here](https://www.microsoft.com/en-gb/download/details.aspx?id=44266)
 
-Download the "win_brenda_installer.py" and move it to your "C:\Python27" directory. 
-Double click it to run. 
+3. Download the zip file,extract it and move the "win_brenda_installer.py" file to your "C:\Python27" directory. 
+
+4.Double click it to run. 
+
 It assumes you already have s3 project and frame buckets set up and ready to go (this can be done from the AWS website). 
