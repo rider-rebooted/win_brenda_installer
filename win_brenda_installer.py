@@ -20,13 +20,41 @@ ap = '/AppData/Roaming/'
 ini = '.s3cmd.ini'
 scf = '.s3cfg'
 sl = '/'
+brenrun = 'brenda-run'
+rk = 'reset-keys'
+init = 'init'
+par = 'paramiko'
+
+m = """output = utils.system_return_output(cmd, capture_stderr=capture_stderr)"""
+n = """
+				#new ssh on windows code-------------------------------------
+				import paramiko
+				#read ssh args from end of cmd object immediately following the node hostname entry
+				sshArgs = " ".join(cmd[cmd.index(node)+1:])
+				#get username
+				user = utils.get_opt(opts.user, conf, 'AWS_USER', default='root')
+				#get path to brenda private rsa key file
+				brendaKeyPath =  aws.get_adaptive_ssh_identity_fn(opts, conf)
+		
+				k = paramiko.RSAKey.from_private_key_file(brendaKeyPath)
+				c = paramiko.SSHClient()
+				c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+		
+				c.connect( hostname = node, username = user, pkey = k )
+				#change working directory on remote node to brenda diretory and execute ssh args
+				commands = ["cd /mnt/brenda", sshArgs]
+				for command in commands:
+					stdin , stdout, stderr = c.exec_command(command)
+					output = stdout.read()
+				c.close()
+				#new ssh on windows code-------------------------------------"""
 
 def spacetime ():
     time.sleep(2)
     clear()
 	
 def spacetime2 ():
-    time.sleep(6)
+    time.sleep(10)
     clear()
 
 def step1 ():
@@ -224,6 +252,83 @@ def step8 ():
 			spacetime()
 			break
 	
+def step9 ():
+	print
+	print 'step 9'
+	print
+	print 'Initiates Brenda and creates "rsa" key file with option to reset keys first'
+	print
+	print
+	print
+	while True:
+		submen = raw_input('Enter "c" to continue or "s" to skip ')
+		if submen =='s':		   
+			break
+		if submen =='c':
+			clear()
+			while True:
+				print
+				print 'Reset keys?'
+				print
+				print
+				print
+				submen = raw_input('Enter "c" to continue or "s" to skip ')
+				if submen =='s':		   
+					break
+				if submen =='c':
+					clear()
+					status = os.chdir(bm)
+					status = os.system(py+sb+brenrun+sb+rk)
+					spacetime()
+					clear()
+					break
+			status = os.chdir(bm)
+			status = os.system(py+sb+brenrun+sb+init)
+			spacetime()
+			break
+
+def step10 ():
+	print
+	print 'step 10'
+	print
+	print 'Install "paramiko"'
+	print
+	print
+	print
+	while True:
+		submen = raw_input('Enter "c" to continue or "s" to skip ')
+		if submen =='s':		   
+			break
+		if submen =='c':
+			clear()
+			status = os.system(pi+sb+ins+sb+par)
+			spacetime()
+			break
+
+def step11 ():
+	print
+	print 'step 11'
+	print
+	print 'Modify tool.py'
+	print
+	print
+	print
+	while True:
+		submen = raw_input('Enter "c" to continue or "s" to skip ')
+		if submen =='s':		   
+			break
+		if submen =='c':
+			clear()
+			status = os.chdir(bm+sl+br)
+			o = open('tool.py', 'r')
+			t = open('tool.py.temp', 'w')
+			for line in o:
+				t.write(line.replace(m, n))
+			o.close()
+			t.close()
+			status = os.rename('tool.py','tool_backup.py' )
+			status = os.rename('tool.py.temp', 'tool.py')
+			break
 
 
 clear()
@@ -243,3 +348,15 @@ step7()
 clear()
 step8()
 clear()
+step9()
+clear()
+step10()
+clear()
+step11()
+clear()
+print
+print 'You should now be able to run Brenda'
+print
+print '(if using the command line start Brenda you will need to run all command '
+print 'calls from the "brenda-master" folder and precede them with "python "'
+spacetime2()
