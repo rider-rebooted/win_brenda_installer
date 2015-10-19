@@ -1,5 +1,5 @@
 # win_brenda_installer (beta)
-Python script to automate the installation of Brenda on to Windows. Work in progress.
+Python script to automate the installation of Brenda on to Windows.
 
 
 **WARNING, THIS IS MY FIRST PYTHON PROJECT AND IT MAY HAVE SERIOUS ISSUES WHICH COULD POTENTIALLY COST YOU MONEY. PLEASE ONLY USE THIS IF YOU ARE FAMILIAR WITH PYTHON AND BRENDA AND YOU ARE HAPPY WITH MY CODE. ALSO MAKE SURE YOU ARE AWARE OF THE ISSUES I'VE POSTED - THERE ARE MORE!**
