@@ -214,7 +214,7 @@ def step6 ():
 
 def step7 ():
 	print
-	print 'step 7'
+	print 'Step 7'
 	print
 	print 'Runs the "s3cmd" configuration'
 	print
@@ -234,7 +234,7 @@ def step7 ():
 
 def step8 ():
 	print
-	print 'step 8'
+	print 'Step 8'
 	print
 	print 'Move and rename the "s3cmd" configuration file'
 	print
@@ -254,7 +254,7 @@ def step8 ():
 	
 def step9 ():
 	print
-	print 'step 9'
+	print 'Step 9'
 	print
 	print 'Initiates Brenda and creates "rsa" key file with option to reset keys first'
 	print
@@ -289,7 +289,7 @@ def step9 ():
 
 def step10 ():
 	print
-	print 'step 10'
+	print 'Step 10'
 	print
 	print 'Install "paramiko"'
 	print
@@ -307,7 +307,7 @@ def step10 ():
 
 def step11 ():
 	print
-	print 'step 11'
+	print 'Step 11'
 	print
 	print 'Modify tool.py'
 	print
@@ -330,6 +330,26 @@ def step11 ():
 			status = os.rename('tool.py.temp', 'tool.py')
 			break
 
+def step12 ():
+	print
+	print 'Step 12'
+	print
+	print 'Create "frame-template" file'
+	print
+	print
+	print
+	while True:
+		submen = raw_input('Enter "c" to continue or "s" to skip ')
+		if submen =='s':		   
+			break
+		if submen =='c':
+			clear()
+			status = os.chdir(bm)
+			file = open("frame-template", "w")
+			print "Creating file"
+			file.write('blender -b *.blend -F PNG -o $OUTDIR/frame_###### -s $START -e $END -j $STEP -t 0 -a')
+			file.close()
+			break
 
 clear()
 step1()
@@ -354,9 +374,19 @@ step10()
 clear()
 step11()
 clear()
-print
-print 'You should now be able to run Brenda'
-print
-print '(if using the command line start Brenda you will need to run all command '
-print 'calls from the "brenda-master" folder and precede them with "python "'
-spacetime2()
+step12()
+clear()
+
+while True:
+	print
+	print 'You should now be able to run Brenda'
+	print
+	print '(if using the command line, you will need to run all command '
+	print 'calls from the "brenda-master" folder and precede them with "python ")'
+	print
+	print
+	print
+	finish = raw_input('Press "e" to exit ')
+	if finish =='e':
+		break
+	clear()
