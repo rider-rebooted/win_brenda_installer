@@ -20,3 +20,6 @@ Step by step installer (each step is skippable) for getting James Yonan's [Brend
 5.Double click it to run. 
 
 It assumes you already have s3 project and frame buckets set up and ready to go (this can be done from the AWS website). 
+
+
+Tested on Windows 8.1 and Windowws 10
