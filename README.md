@@ -13,7 +13,7 @@ Step by step installer (each step is skippable) for getting James Yonan's [Brend
 
 2.Install Microsoft Visual C++ Compiler for Python 2.7 from [here](https://www.microsoft.com/en-gb/download/details.aspx?id=44266)
 
-3. Download the zip file,extract it and move the "win_brenda_installer.py" file to your "C:\Python27" directory. 
+3.Download the zip file,extract it and move the "win_brenda_installer.py" file to your "C:\Python27" directory. 
 
 4.Double click it to run. 
 
