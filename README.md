@@ -21,5 +21,5 @@ Step by step installer (each step is skippable) for getting James Yonan's [Brend
 
 It assumes you already have s3 project and frame buckets set up and ready to go (this as well as uploading your zipped Blender project can be done from the AWS management [console](https://aws.amazon.com/). 
 
-
+I also wrote a very simple [program](https://github.com/rider-rebooted/win_brenda_console) to run Brenda commands without using command lines
 Tested on Windows 8.1 and Windows 10
