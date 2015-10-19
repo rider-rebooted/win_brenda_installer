@@ -15,7 +15,7 @@ Step by step installer (each step is skippable) for getting James Yonan's [Brend
 
 3.Install [Brenda](https://github.com/jamesyonan/brenda) by unzipping the download to drive "c:\" ("step 3" is supposed to do it automatically but fails at the moment)
 
-4.Download the zip file, extract it and move the "win_brenda_installer.py" file to your "C:\Python27" directory. 
+4.Download the win_brenda_installer zip file, extract it and move the "win_brenda_installer.py" file to your "C:\Python27" directory. 
 
 5.Double click it to run. 
 
