@@ -1,6 +1,7 @@
 import time
 import os
 import urllib
+import zipfile
 
 clear = lambda: os.system('cls')
 	
@@ -97,7 +98,9 @@ def step1 ():
 					break
 			clear()
 			break
-		
+
+
+
 def step2 ():
 	print
 	print 'Step 2'
@@ -114,15 +117,17 @@ def step2 ():
 			clear()	   
 			urllib.urlretrieve ("https://bootstrap.pypa.io/get-pip.py", "get-pip.py")
 			status = os.system(py+sb+gp)
-			spacetime()
 			os.remove(gp)
+			print
+			print 'Done'
+			spacetime()
 			break
 
 def step3 ():
 	print
 	print 'Step 3'
 	print
-	print 'Installs "brenda" using "pip". This creates a "brenda-master" directory'
+	print 'Downloads and unzips "brenda" to the "C:\" drive then deletes the zip file'
 	print
 	print
 	print
@@ -131,8 +136,13 @@ def step3 ():
 		if submen =='s':		   
 			break
 		if submen =='c':
-			clear()
-			status = os.system(pi+sb+ins+sb+br)
+			clear()	   
+			urllib.urlretrieve ("https://github.com/rider-rebooted/win_brenda_console/archive/master.zip", "master.zip")
+			with zipfile.ZipFile('master.zip', "r") as z:
+				z.extractall("C:\\")
+			os.remove('master.zip')
+			print
+			print 'Done'
 			spacetime()
 			break
 		
