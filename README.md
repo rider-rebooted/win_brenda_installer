@@ -15,7 +15,7 @@ Step by step installer (each step is skippable) for getting James Yonan's [Brend
 
 3.Download the win_brenda_installer zip file, extract it and move the "win_brenda_installer.py" file to your "C:\Python27" directory. 
 
-4.Double click it to run. 
+4.Double click it to run and follow the instructions.
 
 It assumes you already have s3 project and frame buckets set up and ready to go (this as well as uploading your zipped Blender project can be done from the AWS management [console](https://aws.amazon.com/). 
 
