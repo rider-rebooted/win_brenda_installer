@@ -13,11 +13,9 @@ Step by step installer (each step is skippable) for getting James Yonan's [Brend
 
 2.Install Microsoft Visual C++ Compiler for Python 2.7 from [here](https://www.microsoft.com/en-gb/download/details.aspx?id=44266)
 
-3.Install [Brenda](https://github.com/jamesyonan/brenda) by unzipping the download to drive "c:\" ("step 3" is supposed to do it automatically but fails at the moment)
+3.Download the win_brenda_installer zip file, extract it and move the "win_brenda_installer.py" file to your "C:\Python27" directory. 
 
-4.Download the win_brenda_installer zip file, extract it and move the "win_brenda_installer.py" file to your "C:\Python27" directory. 
-
-5.Double click it to run. 
+4.Double click it to run. 
 
 It assumes you already have s3 project and frame buckets set up and ready to go (this as well as uploading your zipped Blender project can be done from the AWS management [console](https://aws.amazon.com/). 
 
