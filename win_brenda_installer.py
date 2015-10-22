@@ -604,7 +604,6 @@ def step12 ():
 			file.write('blender -b *.blend -F PNG -o $OUTDIR/frame_###### -s $START -e $END -j $STEP -t 0 -a')
 			file.close()
 			break
-step11()
 clear()
 step1()
 clear()
