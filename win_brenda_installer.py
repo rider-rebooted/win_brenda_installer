@@ -355,7 +355,7 @@ def step3 ():
 			break
 		if submen =='c':
 			clear()	   
-			urllib.urlretrieve ("https://github.com/rider-rebooted/win_brenda_console/archive/master.zip", "master.zip")
+			urllib.urlretrieve ("https://github.com/jamesyonan/brenda/archive/master.zip", "master.zip")
 			with zipfile.ZipFile('master.zip', "r") as z:
 				z.extractall("C:\\")
 			os.remove('master.zip')
