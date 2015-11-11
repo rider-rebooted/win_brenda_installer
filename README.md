@@ -2,7 +2,7 @@
 Python script to automate the installation of Brenda on to Windows. Brenda is an open source piece of software which lets you render Blender projects with very low cost (compared to render farms) AWS Amazon computing instances.
 
 
-**WARNING, THIS IS MY FIRST PYTHON PROJECT AND IT MAY HAVE SERIOUS ISSUES. PLEASE ONLY USE THIS IF YOU ARE FAMILIAR WITH PYTHON AND BRENDA AND YOU ARE HAPPY WITH MY CODE. ALSO MAKE SURE YOU ARE AWARE OF THE ISSUES I'VE POSTED - THERE ARE MORE!**
+*WARNING, THIS IS MY FIRST PYTHON PROJECT AND IT MAY HAVE SERIOUS ISSUES.*
 
 **I created a [video tutorial](https://youtu.be/wP0Yh0Gs8Sk)**
 
