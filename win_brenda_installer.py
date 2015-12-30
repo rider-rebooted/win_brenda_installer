@@ -100,7 +100,7 @@ def run_cmd_list(opts, conf, cmd_seq, show_output, capture_stderr):
                 #print "sshargs: " +ssArgs
                 #get username
                 #print "trying new user"
-                user = utils.get_opt(opts.user, conf, 'AWS_USER', default='root')
+                user = utils.get_opt(opts.user, conf, 'AWS_USER', default='ubuntu')
                 #print "user: " + user
                 #get path to brenda private rsa key file
                 brendaKeyPath =  aws.get_adaptive_ssh_identity_fn(opts, conf)
@@ -271,6 +271,7 @@ def perf(opts, conf, args):
 def spacetime ():
     time.sleep(2)
     clear()
+
 	
 def spacetime2 ():
     time.sleep(10)
@@ -293,31 +294,26 @@ def step1 ():
 			status = os.system("""for /f "skip=2 tokens=3*" %a in ('reg query HKCU\Environment /v PATH') do @if [%b]==[] ( @setx PATH "%~a;c:\python27" ) else ( @setx PATH "%~a %~b;c:\python27" )""")
 			status = os.system("""for /f "skip=2 tokens=3*" %a in ('reg query HKCU\Environment /v PATH') do @if [%b]==[] ( @setx PATH "%~a;C:\Python27\Scripts" ) else ( @setx PATH "%~a %~b;C:\Python27\Scripts" )""")
 			print
-			while True:
-				errchk = raw_input('If this resulted in an error then enter "e" otherwise enter "c" to continue ')
-				if errchk =='e':
-					clear()
-					status = os.system('setx PATH "c:\python27;c:\Python27\Scripts"')
-					print
-					print 'Restart computer and start this installer again.'
-					print
-					print 'Make sure you skip "step 1"'
-					spacetime2()
-					spacetime2()
-					break
-				if errchk =='c':
-					clear()
-					print
-					print 'Restart your computer and start this installer again.'
-					print
-					print 'Make sure you skip "step 1"'
-					spacetime2()
-					spacetime2()
-					break
+			if status ==0:
+				clear()
+			if status ==1:
+				clear()
+				print
+				print 'Fixing problem...'
+				time.sleep(1)
+				clear()
+				status = os.system('setx PATH "c:\python27;c:\Python27\Scripts"')
+				time.sleep(1)
+				clear()
+			print
+			print 'Restart your computer and start this installer again.'
+			print
+			print 'Make sure you skip "step 1"'
+			spacetime2()
+			spacetime2()
+			spacetime2()
 			clear()
 			break
-
-
 
 def step2 ():
 	print
