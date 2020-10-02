@@ -1,4 +1,6 @@
-# win_brenda_installer (beta)
+# **This is a mess, buy [Barista](https://blendermarket.com/products/barista) instead!!!** #
+
+## win_brenda_installer (beta) ##
 Python script to automate the installation of Brenda on to Windows. Brenda is an open source piece of software which lets you render Blender projects with very low cost (compared to render farms) AWS Amazon computing instances.
 
 
